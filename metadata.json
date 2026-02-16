@@ -1,0 +1,7 @@
+{
+  "name": "الحرب شاغل عالمنا المعاصر الأبدي ",
+  "description": "An educational platform exploring the causes, impacts, and solutions of wars, featuring an AI chatbot for deeper dialogue.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
