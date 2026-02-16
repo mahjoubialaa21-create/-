@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الحرب والسلام - رؤية تحليلية</title>
+    <title>الحرب شاغل عالمنا المعاصر الأبدي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,67 @@
         body {
             font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
+            background-color: #020617;
+            color: #f1f5f9;
+            margin: 0;
+            overflow-x: hidden;
         }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        
+        /* Unified Global Dark Mesh Background */
+        .global-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(220, 100%, 10%, 1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(0, 100%, 10%, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(160, 100%, 10%, 1) 0, transparent 50%), 
+                radial-gradient(at 0% 100%, hsla(240, 100%, 15%, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, hsla(220, 100%, 5%, 1) 0, transparent 50%);
+            filter: blur(80px);
+            opacity: 0.8;
+            animation: mesh-glow 30s ease-in-out infinite alternate;
         }
-        /* Custom delay classes for staggered animations */
+
+        @keyframes mesh-glow {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.1) rotate(2deg); opacity: 0.9; }
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ef4444;
+        }
+
+        /* Custom animation delays */
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.6s; }
@@ -38,7 +91,8 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body>
+    <div class="global-bg"></div>
     <div id="root"></div>
 </body>
 </html>

@@ -3,17 +3,17 @@ import React from 'react';
 
 const Causes: React.FC = () => {
   return (
-    <div className="pt-20 pb-20">
-      <section className="bg-slate-900 text-white py-24 px-4 text-center">
-        <h1 className="text-5xl font-black mb-6">لماذا تندلع الحروب؟</h1>
+    <div className="pt-20 pb-20 text-slate-100">
+      <section className="bg-slate-950/40 py-24 px-4 text-center backdrop-blur-md border-b border-slate-900">
+        <h1 className="text-5xl font-black mb-6 animate__animated animate__fadeInDown">لماذا تندلع الحروب؟</h1>
         <p className="text-xl text-slate-400 max-w-2xl mx-auto">تحليل عميق للجذور التي تغذي الصراعات المسلحة في العصر الحديث.</p>
       </section>
 
       {/* Political Causes */}
-      <section className="py-24 bg-white px-4">
+      <section className="py-24 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">1</div>
+            <div className="w-12 h-12 bg-red-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-xl shadow-red-900/30">1</div>
             <h2 className="text-3xl font-black">الأسباب السياسية</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -23,9 +23,9 @@ const Causes: React.FC = () => {
               { t: "فشل الدبلوماسية", d: "عندما تغيب لغة الحوار وتفشل المنظمات الدولية في احتواء الأزمات الناشئة." },
               { t: "التدخلات الأجنبية", d: "دعم أطراف خارجية لنزاعات داخلية سعياً وراء مصالح جيوسياسية." }
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold mb-3 text-red-700">{item.t}</h3>
-                <p className="text-slate-600">{item.d}</p>
+              <div key={i} className="p-8 rounded-[2rem] glass hover:bg-slate-900/60 transition-all duration-300 border border-slate-800 shadow-xl">
+                <h3 className="text-xl font-bold mb-3 text-red-500 tracking-tight">{item.t}</h3>
+                <p className="text-slate-400 leading-relaxed">{item.d}</p>
               </div>
             ))}
           </div>
@@ -33,38 +33,38 @@ const Causes: React.FC = () => {
       </section>
 
       {/* Economic Causes */}
-      <section className="py-24 bg-slate-900 text-white px-4">
+      <section className="py-24 bg-slate-950/60 backdrop-blur-md border-y border-slate-900 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">2</div>
+            <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-xl shadow-emerald-900/30">2</div>
             <h2 className="text-3xl font-black">الأسباب الاقتصادية</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
-              { t: "الصراع على الموارد", d: "التنافس المحموم على النفط، الغاز، والمعادن الثمينة." },
-              { t: "أزمات المياه", d: "ندرة المياه العذبة أصبحت سبباً رئيسياً لتوتر العلاقات الدولية." },
-              { t: "الفقر والبطالة", d: "تدهور الأوضاع المعيشية يخلق بيئة خصبة للتطرف والنزاع المسلح." }
+              { t: "الصراع على الموارد", d: "التنافس المحموم على النفط، الغاز، والمعادن الثمينة كسبب لزعزعة استقرار الدول." },
+              { t: "أزمات المياه", d: "ندرة المياه العذبة أصبحت سبباً رئيسياً لتوتر العلاقات الدولية في العقد الأخير." },
+              { t: "الفقر والبطالة", d: "تدهور الأوضاع المعيشية يخلق بيئة خصبة للتطرف والنزاع المسلح العنيف." }
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-slate-800 border border-slate-700">
-                <h3 className="text-xl font-bold mb-3 text-green-500">{item.t}</h3>
-                <p className="text-slate-400">{item.d}</p>
+              <div key={i} className="p-8 rounded-[2rem] glass border border-slate-800 shadow-xl">
+                <h3 className="text-xl font-bold mb-3 text-emerald-500">{item.t}</h3>
+                <p className="text-slate-400 leading-relaxed text-sm">{item.d}</p>
               </div>
             ))}
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-700">
-            <table className="w-full text-right bg-slate-800">
-              <thead className="bg-slate-700">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-800 shadow-2xl">
+            <table className="w-full text-right glass-card">
+              <thead className="bg-slate-900/80">
                 <tr>
-                  <th className="p-4 text-slate-300">عامل الصراع</th>
-                  <th className="p-4 text-slate-300 text-center">نسبة الارتباط بالنزاع</th>
+                  <th className="p-6 text-slate-300 font-black">عامل الصراع</th>
+                  <th className="p-6 text-slate-300 text-center font-black">نسبة الارتباط بالنزاع</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-700">
-                <tr><td className="p-4">الموارد الطبيعية (نفط/معادن)</td><td className="p-4 text-center text-red-400">40%</td></tr>
-                <tr><td className="p-4">اللا مساواة الاقتصادية</td><td className="p-4 text-center text-red-400">25%</td></tr>
-                <tr><td className="p-4">الأزمات الغذائية</td><td className="p-4 text-center text-red-400">20%</td></tr>
-                <tr><td className="p-4">عوامل أخرى</td><td className="p-4 text-center text-red-400">15%</td></tr>
+              <tbody className="divide-y divide-slate-800">
+                <tr className="hover:bg-slate-800/40 transition-colors"><td className="p-6">الموارد الطبيعية (نفط/معادن)</td><td className="p-6 text-center text-red-400 font-bold">40%</td></tr>
+                <tr className="hover:bg-slate-800/40 transition-colors"><td className="p-6">اللا مساواة الاقتصادية</td><td className="p-6 text-center text-red-400 font-bold">25%</td></tr>
+                <tr className="hover:bg-slate-800/40 transition-colors"><td className="p-6">الأزمات الغذائية</td><td className="p-6 text-center text-red-400 font-bold">20%</td></tr>
+                <tr className="hover:bg-slate-800/40 transition-colors"><td className="p-6">عوامل أخرى</td><td className="p-6 text-center text-red-400 font-bold">15%</td></tr>
               </tbody>
             </table>
           </div>
@@ -72,21 +72,21 @@ const Causes: React.FC = () => {
       </section>
 
       {/* Psychological Causes */}
-      <section className="py-24 bg-white px-4">
+      <section className="py-24 bg-transparent px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">3</div>
+            <div className="w-12 h-12 bg-sky-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-xl shadow-sky-900/30">3</div>
             <h2 className="text-3xl font-black">الأسباب النفسية والاجتماعية</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { t: "القومية المتطرفة", d: "الاعتقاد بتفوق عرق أو أمة على أخرى مما يبرر العدوان." },
-              { t: "الكراهية التاريخية", d: "تراكم الأحقاد من صراعات سابقة وتوريثها للأجيال الجديدة." },
-              { t: "التلاعب الإعلامي", d: "استخدام البروباغندا لشيطنة الطرف الآخر وتعبئة الرأي العام للحرب." }
+              { t: "القومية المتطرفة", d: "الاعتقاد بتفوق عرق أو أمة على أخرى مما يبرر العدوان وتبرئة الذات." },
+              { t: "الكراهية التاريخية", d: "تراكم الأحقاد من صراعات سابقة وتوريثها للأجيال الجديدة بلا نقد." },
+              { t: "التلاعب الإعلامي", d: "استخدام البروباغندا لشيطنة الطرف الآخر وتعبئة الرأي العام للحرب والموت." }
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-500 transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-blue-800">{item.t}</h3>
-                <p className="text-slate-600">{item.d}</p>
+              <div key={i} className="p-8 rounded-[2rem] glass border border-slate-800 hover:border-sky-500/30 transition-all shadow-xl">
+                <h3 className="text-xl font-bold mb-3 text-sky-400">{item.t}</h3>
+                <p className="text-slate-400 leading-relaxed text-sm">{item.d}</p>
               </div>
             ))}
           </div>
